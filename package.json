@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/kenhowardpdx/MEANtodo#readme",
   "dependencies": {
-    "jspm": "^0.16.12",
     "live-server": "^0.8.1"
   }
 }
