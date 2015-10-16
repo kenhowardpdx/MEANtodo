@@ -1,0 +1,24 @@
+{
+  "name": "mean-todo",
+  "version": "1.0.0",
+  "description": "A TODO App built on the MEAN stack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kenhowardpdx/MEANtodo.git"
+  },
+  "keywords": [
+    "MEAN",
+    "Angular",
+    "JavaScript"
+  ],
+  "author": "Ken Howard <ken@simplicatedweb.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kenhowardpdx/MEANtodo/issues"
+  },
+  "homepage": "https://github.com/kenhowardpdx/MEANtodo#readme"
+}
