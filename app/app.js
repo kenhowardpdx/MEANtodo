@@ -1,4 +1,9 @@
+var angular = require('angular'),
+    ngRoute = require('angular-route');
+    
 angular.module('app', ['ngRoute']);
+
+require('./controllers');
 
 angular.module('app').config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {

@@ -5,7 +5,9 @@
   "main": "./src/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "live-server --open=/ --port=3000"
+    "start": "live-server --open=/ --port=3000",
+    "watch": "webpack --progress --colors --watch",
+    "postinstall": "webpack"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,8 @@
   },
   "homepage": "https://github.com/kenhowardpdx/MEANtodo#readme",
   "dependencies": {
+    "angular": "^1.4.7",
+    "angular-route": "^1.4.7"
   },
   "devDependencies": {
     "live-server": "^0.8.1",
