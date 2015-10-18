@@ -1,12 +1,15 @@
-var express = require('express');
+var express = require('express'),
+    bodyParser = require('body-parser');
+
+require('./models');
 
 var app = express();
 
+app.use(bodyParser.json());
+
 app.use(express.static('public'));
 
-app.get('/tasks', function(req, res) {
-    res.send(require('../public/tasks.json'));
-});
+require('./routes')(app);
 
 var server = app.listen(3000, function () {
     var host = server.address().address;

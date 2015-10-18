@@ -13,6 +13,7 @@ function TodoTaskController($scope, $element, $timeout) {
     
     _this.save = function() {
         _this.editing = false;
+        _this.saveTask();
     }
     
     $scope.$watch(function () {
@@ -33,7 +34,8 @@ function TodoTaskController($scope, $element, $timeout) {
     });
 }
 
-function TodoTaskDirective() {
+TodoTaskDirective.$inject = ['$parse'];
+function TodoTaskDirective($parse) {
     var template = [
         '<button type="button" class="btn btn-block btn-link btn-task" ng-show="!vm.editing" ng-click="vm.edit()" ng-class="{strike: vm.task.complete}" ng-disabled="vm.task.complete">{{vm.task.message || \'&nbsp;\'}}</button>',
         '<input type="text" class="form-control" ng-model="vm.task.message" ng-show="vm.editing" ng-blur="vm.save()" />'
@@ -41,7 +43,8 @@ function TodoTaskDirective() {
     
     return {
         scope: {
-            task: '=ngModel'
+            task: '=ngModel',
+            saveTask: '&save'
         },
         controller: TodoTaskController,
         controllerAs: 'vm',

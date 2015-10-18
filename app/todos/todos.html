@@ -19,7 +19,7 @@
                     <todo-checkbox ng-model="task.complete" ng-value="true"><todo-checkbox>
                 </td>
                 <td>
-                    <todo-task ng-model="task"></todo-task>
+                    <todo-task ng-model="task" save="vm.saveTask($index)"></todo-task>
                 </td>
                 <td><button type="button" class="btn btn-danger" ng-click="vm.removeTask($index)"><span class="glyphicon glyphicon-remove"></span></button></td>
             </tr>
