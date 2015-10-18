@@ -4,10 +4,14 @@ var angular = require('angular'),
 angular.module('app', ['ngRoute']);
 
 require('./controllers');
+require('./directives');
 
 angular.module('app').config(['$routeProvider', function ($routeProvider) {
     $routeProvider.when('/', {
-        template: '<h1>Home</h1>'
+        controller: 'TodosController',
+        controllerAs: 'vm',
+        templateUrl: 'todos/todos.html',
+        resolve: require('./todos/todos.controller').resolve()
     })
     .when('/about', {
         controller: 'AboutController',

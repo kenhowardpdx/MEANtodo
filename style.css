@@ -1,0 +1,40 @@
+.todo-checkbox {
+    position: relative;
+}
+
+.todo-checkbox input {
+    display: none;
+}
+
+.todo-checkbox span:after {
+    display: inline-block;
+    width: 19px;
+    height: 19px;
+    margin: -1px 4px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+    content: '';
+    border: 1px solid #999;
+    color: #999;
+    font-size: 19px;
+    line-height: .88em;
+    text-align: center;
+}
+
+.todo-checkbox input:checked + span:after {
+    content: 'X';
+}
+
+.btn-task {
+    text-align: left;
+    color: inherit;
+}
+
+.btn-task:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+.strike {
+    text-decoration: line-through;
+}

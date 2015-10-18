@@ -1,0 +1,28 @@
+<h1 class="text-center">My TODOs!</h1>
+
+<div class="form-group">
+    <button type="button" class="btn btn-primary" ng-click="vm.addTask()"><span class="glyphicon glyphicon-plus"></span> Add Task</button>
+</div>
+
+<div class="table-repsonsive">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th style="width: 40px;"></th>
+                <th>Task</th>
+                <th style="width: 40px;"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="task in vm.tasks">
+                <td>
+                    <todo-checkbox ng-model="task.complete" ng-value="true"><todo-checkbox>
+                </td>
+                <td>
+                    <todo-task ng-model="task"></todo-task>
+                </td>
+                <td><button type="button" class="btn btn-danger" ng-click="vm.removeTask($index)"><span class="glyphicon glyphicon-remove"></span></button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
