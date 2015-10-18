@@ -8,7 +8,7 @@ module.exports = {
         vendor: ['angular', 'angular-route']  
     },
     output: {
-        path: __dirname + '/app',
+        path: __dirname + '/public',
         filename: 'bundle.js'
     },
     plugins: [

@@ -17,7 +17,7 @@ function TodosController(tasks) {
 TodosController.resolve = function () {
     getTasks.$inject = ['$http'];
     function getTasks($http) {
-        return $http.get('tasks.json').then(function(response) {
+        return $http.get('/tasks').then(function(response) {
             var tasks = (response.data && response.data.data) ? response.data.data : [];
             return tasks;
         });
